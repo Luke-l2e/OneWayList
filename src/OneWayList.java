@@ -26,7 +26,7 @@ public class OneWayList<T extends Comparable<T>> {
     }
 
     public OneWayList<T> getTail() {
-        OneWayList<T> result = new OneWayList<T>();
+        OneWayList<T> result = new OneWayList<>();
         if (!this.isEmpty())
             result.listHead = listHead.getNext();
         return (result);
@@ -35,8 +35,7 @@ public class OneWayList<T extends Comparable<T>> {
     public int getLength() {
         OneWayElement<T> current = listHead;
         int length = 0;
-        while (current.getNext() != null) {
-            current = current.getNext();
+        while ((current = current.getNext()) != null) {
             length++;
         }
         return length;
