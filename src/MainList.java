@@ -22,5 +22,6 @@ public class MainList {
             System.out.println("Element " + int_list.getFirst() + " will be removed ");
             int_list.removeFirst();
         }
+        int_list.getFirst();
     }
 }

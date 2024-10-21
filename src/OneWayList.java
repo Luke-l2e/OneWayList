@@ -22,6 +22,9 @@ public class OneWayList<T extends Comparable<T>> {
     }
 
     public T getFirst() {
+        if(listHead.getNext() == null){
+            return null;
+        }
         return listHead.getNext().getData();
     }
 
